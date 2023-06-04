@@ -44,6 +44,6 @@ print(str)
 # print(sortowanie)
 # print(sortowanie2)
 # print(sortowanie3)
-# print(i2)
+# print(i2)*2x
 lista = list[1, 2]
 print(dir(lista))*2
