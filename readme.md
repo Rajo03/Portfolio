@@ -1,0 +1,1 @@
+Wszystki projekty od pythona przez blockchain,javascript,django,html,css,php do automatyzacji
