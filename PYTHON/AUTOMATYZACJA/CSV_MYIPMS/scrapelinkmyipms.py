@@ -1,0 +1,1 @@
+# TODO: pobieranie linkow z csv,wczytywanie linku,scrapowanie linków ze strony,zapisywanie zescrapowanych linków do csv 

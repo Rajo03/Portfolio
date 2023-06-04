@@ -1,0 +1,3 @@
+git cmd
+cd Bulk-Tiktoks-Downloader
+node bulktok https://www.tiktok.com/@davidbeckham 

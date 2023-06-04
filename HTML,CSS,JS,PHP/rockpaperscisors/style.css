@@ -1,0 +1,26 @@
+.choiceBtn{
+   line-height: 30px;
+   width: 150px;
+
+
+}
+
+
+
+#gameDiv{
+    font-family:'Courier New', Courier, monospace;
+    border: 3PX solid;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: aqua;
+    text-align: center;
+
+}
+
+#playerText{
+    color: blue;
+}
+
+#computerText{
+    color: red;
+}

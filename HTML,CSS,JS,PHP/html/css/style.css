@@ -1,0 +1,45 @@
+.lewo-gora {
+    background-color: #9cc2e5;
+    float: left;
+    width: 50%;
+    height: 300px;
+    text-align: center;
+}
+
+.prawo-gora {
+    background-color: #00b050;
+    float: left;
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.lewo-dol {
+    background-color: #0070c0;
+    float: left;
+    width: 50%;
+    height: 300px;
+    font-weight: bold;
+}
+.prawo-dol {
+    background-color: #ffd966;
+    float: left;
+    width: 50%;
+    height: 300px;
+}
+ol {
+    color: red;
+}
+img {
+    border: 2px solid;
+    margin-top: 5%;
+}
+
+button {
+    background-color: #c00000;
+}
+
+table {
+    text-align: left;
+}

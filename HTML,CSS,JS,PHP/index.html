@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Kalkulator</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="styl.css">
+<script>
+function Calculator(operator) 
+{
+    var a = document.getElementById('a').value;
+    var b = document.getElementById('b').value;  
+ 
+    switch(operator) 
+    {
+        case '+':
+            var result = parseFloat(a) + parseFloat(b);         
+        break;
+        case '-':
+            var result = parseFloat(a) - parseFloat(b);         
+        break;  
+        case 'x':
+            var result = parseFloat(a) * parseFloat(b);         
+        break;  
+        case '/':
+            var result = parseFloat(a) / parseFloat(b);         
+        break;    
+    }
+ 
+    document.getElementById('result').value = '= ' + result;
+}
+</script>
+</head>
+<body>
+<form id="calculator">
+    <input type="text" id="a"/>
+    <input type="text" id="b"/>
+    <p>
+    <button type="button" onclick="Calculator(this.innerHTML)">+</button> 
+    <button type="button" onclick="Calculator(this.innerHTML)">-</button>
+    <button type="button" onclick="Calculator(this.innerHTML)">x</button>   
+    <button type="button" onclick="Calculator(this.innerHTML)">/</button><p>
+    Wynik:<input type="text" id="result"  disabled="disabled" />
+</form>
+</body>
+</html>

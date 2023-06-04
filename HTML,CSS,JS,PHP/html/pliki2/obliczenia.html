@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+    function paliwo(){
+      var a=document.getElementById("a").value;
+      var b=document.getElementById("b").value;
+	  if (a==1) {
+	    var wynik1=4*b;
+		document.getElementById("wynik1").innerHTML="wynik:" +wynik1+"zł";
+	  }
+	  if (a==2) {
+	    var wynik2=3.5*b;
+		document.getElementById("wynik1").innerHTML="wynik:" +wynik2+"zł";
+	  }
+	  else {
+		wynik3=0
+		document.getElementById("wynik1").innerHTML="wynik:" +wynik3 +"zł";
+
+	  }
+    
+	
+
+    }
+</script>
+
+
+
+
+<meta charset="utf-8">
+<title>Stacja paliw</title>
+<link rel="stylesheet" href="styl2.css">
+
+</head>
+<body>
+
+
+<div class="lewy">
+<h2>Orientacyny koszt paliw</h2>
+Rodzaj paliwa
+<input type="number" id="a" max="2"><br>
+Ile litrów
+<input type="number" id="b"><br>
+<button onclick="paliwo()">Oblicz</button><br>
+Ile:<h4 id="wynik1"></h4> <h4 id="wynik2"></h4>
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+ <html>
+	<head>
+
+
+	<script>
+     function prostopadocian(){
+        var a=document.getElementById("a").value;
+		var b=document.getElementById("b").value;
+		var c=document.getElementById("c").value;
+		var P=2*(a+b+c)
+        var V=a*b*c;
+		document.getElementById("prostoP").innerHTML="Wynik:" +P;
+		document.getElementById("prostoV").innerHTML="Wynik:" +V;
+	}
+    
+	function walec(){
+		var r=document.getElementById("r").value;
+		var h=document.getElementById("h").value;
+		var Pp=Math.PI*r**2;
+		var Pb=2*Math.PI*r*h;
+		var Pc=2*Pp+Pb;
+        var Vc=Pb*h;
+		document.getElementById("walecP").innerHTML="Wynik:" +Pc;
+		document.getElementById("walecV").innerHTML="Wynik:" +Vc;
+	}
+
+    function kula(){
+		var r=document.getElementById("R").value;
+		var Pkula=Math.PI * Math.pow(r, 2);
+		var Vkula=4/3 * Math.PI * Math.pow(r, 3);
+		document.getElementById("kulaP").innerHTML="Wynik:" +Pkula;
+		document.getElementById("kulaV").innerHTML="Wynik:" +Vkula;
+	}
+	
+
+
+	</script>
+	<title>
+	BRYŁY
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styl.css">
+	</head>
+
+
+	<body>
+	<div class="naglowek">
+	<h1> BRYŁY </h1>
+	</div>
+	<div class="lewa">
+	<img src="prostopadocian.bmp"><br>
+	A:<input type="number" id="a"><br>
+	B:<input type="number" id="b"><br>
+    C:<input type="number" id="c"><br>
+	<button onclick="prostopadocian()">Oblicz</button><br>
+    Pole:<h5 id="prostoP"></h5>
+	Objetość:<h5 id="prostoV"></h5>
+	</div>
+
+	<div class="srodek">
+	<img src="walec.png" width="auto" height="200px"><br>
+	R:<input type="number" id="r"><br>
+	H:<input type="number" id="h"><br>
+    <button onclick="walec()">Oblicz</button><br>
+    Pole:<h5 id="walecP"></h5>
+	Objetość:<h5 id="walecV"></h5>
+	</div>
+
+	<div class="prawa">
+	<img src="kula.png" width="auto" height="200px"><br>
+	R:<input type="number" id="R"><br>
+	<button onclick="kula()">Oblicz</button><br>
+    Pole:<h5 id="kulaP"></h5>
+	Objetość:<h5 id="kulaV"></h5>
+	</div>
+
+	<div id="stopka">
+	<p> Autor: ja </P>
+	</div>
+	</div>
+	</body>
+	</html>

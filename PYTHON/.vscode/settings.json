@@ -1,0 +1,13 @@
+{
+    "jupyter.jupyterServerType": "local",
+    "editor.fontLigatures": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "1",
+            "database": "${workspaceFolder:PYTHON}/CENYWEBSCRP/cenypaliwo.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

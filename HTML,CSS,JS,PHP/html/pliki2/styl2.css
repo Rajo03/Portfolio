@@ -1,0 +1,34 @@
+body {
+	font-family: Cambria;
+	text-align: center;
+	
+}
+
+.baner,.stopka {
+	background-color: rgb(120, 0, 46);
+	color: white;
+	margin: 5px;
+	font-size:150%;
+	
+}
+.lewy {
+	background-color: rgb(173, 20, 87);
+	
+}
+
+.blokmenu {
+	background-color: rgb(173, 20, 87);
+	text-align: left;
+}
+
+.prawy {
+	background-color: rgb(173, 20, 87);
+	width: 40%;
+	height: 322px;
+}
+
+.samochod {
+	margin: 40px;
+	padding: 10px;
+
+}

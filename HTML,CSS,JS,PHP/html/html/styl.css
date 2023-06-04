@@ -1,0 +1,33 @@
+    .naglowek{
+        width: 100%;
+        height: 100px;
+        float: left;
+        background-color: azure;
+    }
+
+    .lewa{
+      float: left;
+      width: 20%;
+      background-color: beige;
+      height: 1000px;
+    }
+    .srodek{
+        height: 1000px;
+        float: left;
+        background-color: beige;
+        
+    }
+
+    .prawa{
+
+        background-color: beige;
+        height: 1000px;
+    }
+    .stopka{
+        width: 100%;
+        background-color: aquamarine;
+    }
+    img{
+        width:auto;
+        height: 300px;
+    }

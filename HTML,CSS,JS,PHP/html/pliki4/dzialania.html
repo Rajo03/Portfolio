@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<title>Działania Matematyczne</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<div class="baner1">
+<img src="logo.jpg" alt="matematyka">
+</div>
+
+<div class="baner2">
+<h1>Pomocnik Matematyczny</h1>
+</div>
+
+<div class="baner3">
+    <a href="dzialania.html">
+<h4>Działania</h4></a>
+</div>
+
+<div class="baner4">
+    <a href="mnozenie.html">
+    <h4>Tabliczka mnożenia</h4></a>
+</div>
+
+<div class="lewy">
+    <h3>Proste Działania</h3>
+    Liczba A:<input type="text" id="liczbaA"><br>
+    Liczba B:<input type="text" id="liczbaB"><br>
+    <button onclick="dodawanie()">+</button>
+    <button onclick="odejmowanie()">-</button>
+    <button onclick="mnozenie()">*</button>
+    <button onclick="dzielenie()">/</button>
+    <button onclick="potegowanie()">/</button><br>
+    <span id="wynik"></span>
+</div>
+<div class="prawy">
+<ul>
+    <li>dodawanie</li>
+    <li>odejmowanie</li>
+    <li>mnozenie</li>
+    <li>dzielenie</li>
+    <li>potegowanie</li>
+</ul>
+
+</div>
+
+<div class="stopka">
+<p>Autor:0000000000</p>
+</div>
+
+<script>
+    function dodawanie(){
+    var liczbaA = document.getElementById('liczbaA').value;
+    liczbaA = parseInt(liczbaA)
+    var liczbaB = document.getElementById('liczbaB').value;
+    liczbaB = parseInt(liczbaB)
+    var wynik = liczbaA + liczbaB;
+    document.getElementById('wynik').innerHTML = "Wynik:" +wynik;l
+    }
+    function odejmowanie(){
+        var liczbaA = document.getElementById('liczbaA').value;
+        liczbaA = parseInt(liczbaA)
+        var liczbaB = document.getElementById('liczbaB').value;
+        liczbaB = parseInt(liczbaB)
+        var wynik = liczbaA - liczbaB;
+        document.getElementById('wynik').innerHTML = "Wynik:" +wynik;l
+    }
+    function mnozenie(){
+        var liczbaA = document.getElementById('liczbaA').value;
+        liczbaA = parseInt(liczbaA)
+        var liczbaB = document.getElementById('liczbaB').value;
+        liczbaB = parseInt(liczbaB)
+        var wynik = liczbaA * liczbaB;
+        document.getElementById('wynik').innerHTML = "Wynik:" +wynik;l
+    }
+
+    function dzielenie(){
+        var liczbaA = document.getElementById('liczbaA').value;
+        liczbaA = parseInt(liczbaA)
+        var liczbaB = document.getElementById('liczbaB').value;
+        liczbaB = parseInt(liczbaB)
+        var wynik = liczbaA / liczbaB;
+        document.getElementById('wynik').innerHTML = "Wynik:" +wynik;l
+    }
+    function potegowanie(){
+        var liczbaA = document.getElementById('liczbaA').value;
+        liczbaA = parseInt(liczbaA)
+        var liczbaB = document.getElementById('liczbaB').value;
+        liczbaB = parseInt(liczbaB)
+        var wynik = Math.pow(liczbaA, liczbaB);
+        document.getElementById('wynik').innerHTML = "Wynik:" +wynik;l
+        }
+
+</script>
+
+</body>
+
+</html>

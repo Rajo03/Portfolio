@@ -1,0 +1,18 @@
+funkcja (p,q)
+
+
+4/5 - 4/5 = 0
+
+max 5/4
+
+i = 1
+
+dopoki p!= 0 wykonuj
+li = sufit (q/p)
+
+a[i] = li\
+
+i < i +1
+p = p *li -q
+q = q *li
+zwroc a

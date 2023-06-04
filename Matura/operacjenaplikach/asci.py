@@ -1,0 +1,1 @@
+for wiersz in wiersz
