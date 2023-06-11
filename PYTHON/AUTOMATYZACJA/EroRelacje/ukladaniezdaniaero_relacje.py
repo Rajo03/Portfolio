@@ -4,6 +4,7 @@ import random
 
 
 poczatek = ["Seksi", "Seksowna", "Przepiękna", "Urocza", "Piękna", "Ładna", "Atrakcyjna", "Wyjątkowa", "Niegrzeczna","Milutka","Zjawiskowa","Czarująca","Fascynująca","Niezwykła","Olśniewająca","Zachwycająca","Porywająca","Namiętna"]
+#link do relacji https://randki5minut.mobirisesite.com/
 
 
 imiona = ['Maria', 'Anna', 'Katarzyna', 'Małgorzata', 'Agnieszka', 'Barbara', 'Krystyna', 'Ewa', 'Teresa', 'Joanna',

@@ -7,7 +7,7 @@ from PIL import Image
 date_str = input("podaj date pierwszego pina '%Y-%m-%d %H:%M': ")
 sciezka = input("Podaj scieżke(kategorie pina):")
 ilosc_pinow = int(input("ile pinów chcesz zaplanować?"))
-path = f"S:\\ARCHIWUM\\Explorer Eye\\Nature and Wildlife Travel"
+path = f"S:\\ARCHIWUM\\Explorer Eye\\pinywideo"
 
 
 def zmiana_nazwy_pliku_od_1():
@@ -23,7 +23,7 @@ def zmiana_nazwy_pliku_od_1():
 
 
 def tworzenie_pliku_excel():
-    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest.xlsx"
+    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest2.xlsx"
 
 
 
@@ -46,26 +46,26 @@ def tworzenie_pliku_excel():
     for i in range(ilosc_pinow):
         
         # Write the message column data
-        message = f"Nature and Wildlife Travel#{i+1}"
+        message = f"Travel#{i+1}"
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
         worksheet.write(i + 1, 1, "video")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Explorer Eye/{sciezka}/{i+1}.jpg"
+        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Explorer Eye/{sciezka}/{i+1}.mp4"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data
         
         
         worksheet.write(i + 1, 3, date.strftime("%Y-%m-%d %H:%M"))
-        
-        if (i % 3 == 2):
-            date -= datetime.timedelta(hours = 6)
-            date += datetime.timedelta(days = 1)
-        else:
-            date += datetime.timedelta(hours = 3)
+        date += datetime.timedelta(hours = 24)
+        # if (i % 3 == 2):
+        #     date -= datetime.timedelta(hours = 6)
+        #     date += datetime.timedelta(days = 1)
+        # else:
+        #     date += datetime.timedelta(hours = 3)
 
 
 
@@ -79,9 +79,9 @@ def tworzenie_pliku_excel():
 
 
 def convert_xlsx_to_csv():
-    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest.xlsx")
+    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest2.xlsx")
 
-    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest.csv", index=False)
+    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ExplorerEye_Pinterest.csv2", index=False)
 
     exit()
 

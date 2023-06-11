@@ -2,16 +2,15 @@ import xlsxwriter
 import datetime
 import pandas as pd
 import os
-from PIL import Image
-
-date_str = input("podaj date pierwszego pina 'DD.MM.YYYY HH:MM': ")
-sciezka = input("Podaj scieżke(kategorie pina):")
+import random
 
 
+xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\tiktokexplorereye.xlsx"
+date_str = input("Enter date and time in the format '%Y-%m-%d %H:%M': ")
 
 
-path = f"S:\\ARCHIWUM\\Minimalist Mindset\\Minimalist Quotes and Affirmationsjpg"
 
+path = "S:\\ARCHIWUM\\Explorer Eye\\tiktok"
 
 def numbering_name():
     i = 1
@@ -23,17 +22,10 @@ def numbering_name():
 
 
 def tworzenie_pliku_excel():
-    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\MinimalistMindset_Pinterest.xlsx"
-
-
-
-    date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M")
-
-    # Create a new XLSX file and add a worksheet
     workbook = xlsxwriter.Workbook(xlsx_file_path)
     worksheet = workbook.add_worksheet()
 
-        
+    date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M")
         
 
     # Set the column headers
@@ -43,29 +35,27 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(71):
+    for i in range(50):
         
         # Write the message column data
-        message = f"Minimalist Quotes and Affirmations#{i+1}"
+        hastagi = ["#interiordesign", "#designchoices", "#foryourpage", "#interiortiktok", "#designtok", "#decortips", "#aesthetic", "#minimalistic", "#minimalist"]
+        
+        message = f"{random.choices(hastagi, k=5)}"
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
         worksheet.write(i + 1, 1, "video")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Minimalist Mindset/{sciezka}/{i+1}.jpg"
+        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Explorer Eye/tiktok/{i+1}.mp4"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data
         
         
         worksheet.write(i + 1, 3, date.strftime("%Y-%m-%d %H:%M"))
+        date += datetime.timedelta(hours=24)
         
-        if (i % 3 == 2):
-            date -= datetime.timedelta(hours = 6)
-            date += datetime.timedelta(days = 1)
-        else:
-            date += datetime.timedelta(hours = 3)
 
 
 
@@ -73,12 +63,16 @@ def tworzenie_pliku_excel():
     workbook.close()
 
 
-def convert_xlsx_to_csv():
-    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\MinimalistMindset_Pinterest.xlsx")
 
-    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\MinimalistMindset_Pinterest.csv", index=False)
+
+def convert_xlsx_to_csv():
+    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\tiktokexplorereye.xlsx")
+
+    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\tiktokexplorereye.csv", index=False)
 
     exit()
+
+
 
 tworzenie_pliku_excel()
 convert_xlsx_to_csv()

@@ -42,7 +42,7 @@ worksheet.write_row(0, 0, header_row)
 # Set up the CSV reader and read the column data
 
 # Write the column data and other data to the worksheet
-for i in range(317):
+for i in range(133):
     
     # Write the message column data
     message = f"{sciezka}#{i+1}"
