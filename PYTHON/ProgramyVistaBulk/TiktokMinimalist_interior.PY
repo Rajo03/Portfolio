@@ -35,7 +35,7 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(50):
+    for i in range(23):
         
         # Write the message column data
         hastagi = ["#interiordesign", "#designchoices", "#foryourpage", "#interiortiktok", "#designtok", "#decortips", "#aesthetic", "#minimalistic", "#minimalist"]
