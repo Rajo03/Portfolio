@@ -7,8 +7,8 @@ from PIL import Image
 date_str = input("podaj date pierwszego pina '%Y-%m-%d %H:%M': ")
 sciezka = input("Podaj scieżke(kategorie pina):")
 
-
 path = f"S:\\ARCHIWUM\\MinimalistInterior\\pinterest\\office"
+ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
 def numbering_name():
     i = 1
@@ -43,17 +43,17 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(69):
+    for i in range(ilosc_postow):
         
         # Write the message column data
-        message = f"Minimalistic Office#{i+1}"
+        message = f"Minimalistic Living Room#{i+1}"
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
         worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/MinimalistInterior/pinterest/office/{i+1}.jpg"
+        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/MinimalistInterior/pinterest/livingroom/{i+1}.jpg"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data

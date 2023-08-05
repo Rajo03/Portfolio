@@ -16,7 +16,7 @@ xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\pinterestmasculine
 date_str = input("Podaj date opublikowania pierwszego posta '%Y-%m-%d %H:%M': ")
 date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M")
 sciezka = input("Podaj scieżke(kategorie pina):")
-
+ilosc_tiktok = int(input("ile tiktok chcesz zaplanować?"))
 
 path = f"S:\\ARCHIWUM\\Masculine Tribe\\{sciezka}"
 
@@ -42,10 +42,10 @@ worksheet.write_row(0, 0, header_row)
 # Set up the CSV reader and read the column data
 
 # Write the column data and other data to the worksheet
-for i in range(133):
+for i in range(ilosc_tiktok):
     
     # Write the message column data
-    message = f"{sciezka}#{i+1}"
+    message = f"Grilling and Cooking#{i+1}"
     worksheet.write(i + 1, 0, message)
     
     # Write the type column data

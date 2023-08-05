@@ -4,31 +4,24 @@ import pandas as pd
 import os
 from PIL import Image
 
-date_str = input("podaj date pierwszego pina '%Y-%m-%d %H:%M': ")
-sciezka = input("Podaj scieżke(kategorie pina): ")
-ilosc_pinow = int(input("ile pinów chcesz zaplanować?"))
+date_str = input("podaj date pierwszego posta '%Y-%m-%d %H:%M': ")
+sciezka = input("Podaj scieżke:")
+ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
-
+#TODO:Pobieranie opisu z innego arkusza
 
 
 
 #rename pliki i convert na jpg
-path = f"S:\\ARCHIWUM\\Fresh Fuel Daily\\{sciezka}"
+path = f"S:\\ARCHIWUM\\Marka osobista\\ENG\\{sciezka}"
 
-def zmiana_nazwy_pliku_od_1():
-    i = 1
-    for filename in os.listdir(path):
-        old_path = os.path.join(path, filename)
-        new_path = os.path.join(path, str(i) + os.path.splitext(filename)[1])
-        os.rename(old_path, new_path)
-        i += 1
 
 
 
 
 # Set up the input and output file paths
 def tworzenie_pliku_excel():
-    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Freshfuel_Pinterest.xlsx"
+    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilENG.xlsx"
 
 
 
@@ -48,7 +41,7 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(ilosc_pinow):
+    for i in range(ilosc_postow):
         
         # Write the message column data
         message = f"Clean Eating#{i+1}"
@@ -58,7 +51,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "video")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Fresh Fuel Daily/{sciezka}/{i+1}.jpg"
+        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Marka osobista/ENG/{sciezka}/{i+7}.jpg"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data
@@ -66,11 +59,10 @@ def tworzenie_pliku_excel():
         
         worksheet.write(i + 1, 3, date.strftime("%Y-%m-%d %H:%M"))
         
-        if (i % 3 == 2):
-            date -= datetime.timedelta(hours = 6)
-            date += datetime.timedelta(days = 1)
-        else:
-            date += datetime.timedelta(hours = 3)
+        
+        date += datetime.timedelta(days = 1)
+        
+        
 
 
 
@@ -80,15 +72,14 @@ def tworzenie_pliku_excel():
 
 
 def convert_xlsx_to_csv():
-    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Freshfuel_Pinterest.xlsx")
+    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilENG.xlsx")
 
-    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Freshfuel_Pinterest.csv", index=False)
+    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilENG.csv", index=False)
 
     exit()
 
 
 
 
-zmiana_nazwy_pliku_od_1()
 tworzenie_pliku_excel()
 convert_xlsx_to_csv()

@@ -93,7 +93,7 @@ def tworzenie_pliku_excel():
 
         
     # Set the column headers
-    header_row = ["message", "type", "link", "time","commment1"]
+    header_row = ["message", "type", "link", "time","comment1"]
     worksheet.write_row(0, 0, header_row)
 
     # Set up the CSV reader and read the column data
@@ -112,16 +112,9 @@ def tworzenie_pliku_excel():
         
         # Write the link column data
         link = f"http://hosting2275851.online.pro/ARCHIWUM/fanpage/1fb/{i+1}.jpg"
-        # try:
-        #     response = requests.get(link)
-        #     response.raise_for_status()  # Sprawdza, czy wystąpił błąd HTTP
-        #     print("Zdjecie jest na hostingu")
-        # except requests.HTTPError as err:
-        #     print(f"Błąd HTTP: {err}")
-        # except requests.RequestException as err:
-        #     print(f"Wystąpił ogólny błąd: {err} z zdjeciem {i+1}")
+        
             
-            
+           
         worksheet.write(i + 1, 2, link)
         
         # Write the time column data
@@ -135,7 +128,7 @@ def tworzenie_pliku_excel():
         else:
             date += datetime.timedelta(hours = 3)
         
-        worksheet.write(i + 1, 4, "Kontakt do niej:https://m.me/LadneLaski")
+        worksheet.write(i + 1, 4, "Kontakt do niej:https://m.me/SeksiLaski")
 
 
 

@@ -8,10 +8,8 @@ date_str = input("podaj date pierwszego pina 'DD.MM.YYYY HH:MM': ")
 sciezka = input("Podaj scieżke(kategorie pina):")
 
 
-
-
 path = f"S:\\ARCHIWUM\\Minimalist Mindset\\Minimalist Quotes and Affirmationsjpg"
-
+ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
 def numbering_name():
     i = 1
@@ -43,7 +41,7 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(71):
+    for i in range(ilosc_postow):
         
         # Write the message column data
         message = f"Minimalist Quotes and Affirmations#{i+1}"

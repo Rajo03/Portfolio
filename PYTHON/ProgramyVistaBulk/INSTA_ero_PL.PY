@@ -93,7 +93,7 @@ def tworzenie_pliku_excel():
         
 
     # Set the column headers
-    header_row = ["message", "type", "link", "time","commment1"]
+    header_row = ["message", "type", "link", "time","comment1"]
     worksheet.write_row(0, 0, header_row)
 
     # Set up the CSV reader and read the column data

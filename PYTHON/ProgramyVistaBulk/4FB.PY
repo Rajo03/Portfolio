@@ -90,7 +90,7 @@ def tworzenie_pliku_excel():
         
 
     # Set the column headers
-    header_row = ["message", "type", "link", "time","commment1"]
+    header_row = ["message", "type", "link", "time","comment1"]
     worksheet.write_row(0, 0, header_row)
 
 
@@ -122,7 +122,7 @@ def tworzenie_pliku_excel():
         else:
             date += datetime.timedelta(hours = 3)
         
-        worksheet.write(i + 1, 4, "Czekam na kontakt:https://m.me/StudentkazPolski")
+        worksheet.write(i + 1, 4, "Kontakt do niej:https://m.me/SeksiLaski")
 
 
 

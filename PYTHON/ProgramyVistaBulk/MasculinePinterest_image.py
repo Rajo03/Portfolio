@@ -8,7 +8,7 @@ date_str = input("podaj date pierwszego pina '%Y-%m-%d %H:%M': ")
 sciezka = input("Podaj scieżke(kategorie pina):")
 
 path = f"S:\\ARCHIWUM\\Masculine Tribe\\fashionmp4"
-
+ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
 def convert_and_numbering_name():
     i = 1
@@ -40,7 +40,7 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(44):
+    for i in range(ilosc_postow):
         
         # Write the message column data
         message = f"{sciezka}#{i+1}"
@@ -50,7 +50,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Masculine Tribe/{sciezka}/{i+1}.mp4"
+        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Masculine Tribe/{sciezka}/{i+1}.jpg"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data

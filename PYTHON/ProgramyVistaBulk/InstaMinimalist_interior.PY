@@ -16,6 +16,8 @@ emotki = ["😍","🤭","👍","😮","😘","🥰","🤪","😜"]
 
 
 path = "S:\\ARCHIWUM\\MinimalistInterior\\instagram"
+ilosc_postow = int(input("ile postow chcesz zaplanować?"))
+date_str = input("Podaj date opublikowania pierwszego posta '%Y-%m-%d %H:%M': ")
 
 def convert_and_numbering_name():
     # Lista obsługiwanych rozszerzeń plików
@@ -62,7 +64,7 @@ def tworzenie_pliku_excel():
 
     xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\minimalistinsta.xlsx"
 
-    date_str = input("Podaj date opublikowania pierwszego posta '%Y-%m-%d %H:%M': ")
+    
     date = datetime.datetime.strptime(date_str, "%Y-%m-%d %H:%M")
 
     # Create a new XLSX file and add a worksheet
@@ -73,13 +75,13 @@ def tworzenie_pliku_excel():
         
 
     # Set the column headers
-    header_row = ["message", "type", "link", "time"]
+    header_row = ["message", "type", "link", "time", "comment1"]
     worksheet.write_row(0, 0, header_row)
 
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(50):
+    for i in range(ilosc_postow):
         
         # Write the message column data
         
@@ -88,7 +90,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
-        worksheet.write(i + 1, 1, "video")
+        worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
         link_path = f"http://hosting2275851.online.pro/ARCHIWUM/MinimalistInterior/instagram/{i+1}.jpg"
@@ -100,7 +102,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 3, date.strftime("%Y-%m-%d %H:%M"))
         date += datetime.timedelta(hours=24)
         
-
+        
 
 
     # Close the workbook

@@ -7,7 +7,7 @@ import random
 
 xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\tiktokminimalist.xlsx"
 date_str = input("Enter date and time in the format '%Y-%m-%d %H:%M': ")
-
+ilosc_tiktok = int(input("ile tiktok chcesz zaplanować?"))
 
 
 path = "S:\\ARCHIWUM\\MinimalistInterior\\tiktok"
@@ -35,7 +35,7 @@ def tworzenie_pliku_excel():
     # Set up the CSV reader and read the column data
 
     # Write the column data and other data to the worksheet
-    for i in range(23):
+    for i in range(ilosc_tiktok):
         
         # Write the message column data
         hastagi = ["#interiordesign", "#designchoices", "#foryourpage", "#interiortiktok", "#designtok", "#decortips", "#aesthetic", "#minimalistic", "#minimalist"]
