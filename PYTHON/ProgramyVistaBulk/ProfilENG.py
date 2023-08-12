@@ -51,7 +51,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "video")
         
         # Write the link column data
-        link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Marka osobista/ENG/{sciezka}/{i+7}.jpg"
+        link_path = f"http://hosting2303687.online.pro/ARCHIWUM/Marka osobista/ENG/{sciezka}/{i+7}.jpg"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data

@@ -108,7 +108,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
-        link = f"http://hosting2275851.online.pro/ARCHIWUM/fanpage/2fb/{i+1}.jpg"
+        link = f"http://hosting2303687.online.pro/ARCHIWUM/fanpage/2fb/{i+1}.jpg"
         worksheet.write(i + 1, 2, link)
         
         # Write the time column data
@@ -122,7 +122,7 @@ def tworzenie_pliku_excel():
         else:
             date += datetime.timedelta(hours = 3)
         
-        worksheet.write(i + 1, 4, "Kontakt do niej:https://m.me/SeksiLaski")
+        worksheet.write(i + 1, 4, "Umów się ze mną:https://m.me/SeksiLaski")
 
 
 

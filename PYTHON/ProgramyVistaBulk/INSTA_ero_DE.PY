@@ -94,7 +94,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
-        link = f"http://hosting2275851.online.pro/ARCHIWUM/insta/niemiecki/{i+1}.jpg"
+        link = f"http://hosting2303687.online.pro/ARCHIWUM/insta/niemiecki/{i+1}.jpg"
         worksheet.write(i + 1, 2, link)
         
         # Write the time column data

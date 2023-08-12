@@ -100,7 +100,7 @@ def tworzenie_pliku_excel():
 
 
     # Write the column data and other data to the worksheet
-    for i in range(ilosc_postów-1):
+    for i in range(ilosc_postów):
         # Write the message column data
         
         sentence = f"{random.choice(imiona)}, {random.choice(wiek)}-latka z {random.choice(miasta)}, Opis: {random.choice(opis)}"
@@ -111,7 +111,7 @@ def tworzenie_pliku_excel():
         worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
-        link = f"http://hosting2275851.online.pro/ARCHIWUM/fanpage/1fb/{i+1}.jpg"
+        link = f"http://hosting2303687.online.pro/ARCHIWUM/fanpage/1fb/{i+1}.jpg"
         
             
            
@@ -128,7 +128,7 @@ def tworzenie_pliku_excel():
         else:
             date += datetime.timedelta(hours = 3)
         
-        worksheet.write(i + 1, 4, "Kontakt do niej:https://m.me/SeksiLaski")
+        worksheet.write(i + 1, 4, "Umów się ze mną:https://m.me/SeksiLaski")
 
 
 

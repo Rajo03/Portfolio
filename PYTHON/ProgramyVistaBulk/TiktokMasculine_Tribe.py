@@ -52,19 +52,19 @@ for i in range(ilosc_tiktok):
     worksheet.write(i + 1, 1, "video")
     
     # Write the link column data
-    link_path = f"http://hosting2275851.online.pro/ARCHIWUM/Masculine Tribe/{sciezka}/{i+1}.mp4"
+    link_path = f"http://hosting2303687.online.pro/ARCHIWUM/agencja/{i+1}.mp4"
     worksheet.write(i + 1, 2, link_path)
     
     # Write the time column data
     
     
     worksheet.write(i + 1, 3, date.strftime("%Y-%m-%d %H:%M"))
-    
-    if (i % 3 == 0):
-        date -= datetime.timedelta(hours = 6)
-        date += datetime.timedelta(days = 1)
-    else:
-        date += datetime.timedelta(hours = 3)
+    date += datetime.timedelta(days = 1)
+    # if (i % 3 == 0):
+    #     date -= datetime.timedelta(hours = 6)
+    #     
+    # else:
+    #     date += datetime.timedelta(hours = 3)
 
 
 
