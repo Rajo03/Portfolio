@@ -45,14 +45,14 @@ worksheet.write_row(0, 0, header_row)
 for i in range(ilosc_tiktok):
     
     # Write the message column data
-    message = f"Grilling and Cooking#{i+1}"
+    message = f"Cars and Motorcycles#{i+1}"
     worksheet.write(i + 1, 0, message)
     
     # Write the type column data
     worksheet.write(i + 1, 1, "video")
     
     # Write the link column data
-    link_path = f"http://hosting2303687.online.pro/ARCHIWUM/agencja/{i+1}.mp4"
+    link_path = f"http://hosting2303687.online.pro/ARCHIWUM/Masculine Tribe/mustang_vintage_usa/{i+1}.mp4"
     worksheet.write(i + 1, 2, link_path)
     
     # Write the time column data

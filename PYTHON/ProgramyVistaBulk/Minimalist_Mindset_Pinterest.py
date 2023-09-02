@@ -8,7 +8,7 @@ date_str = input("podaj date pierwszego pina 'DD.MM.YYYY HH:MM': ")
 sciezka = input("Podaj scieżke(kategorie pina):")
 
 
-path = f"S:\\ARCHIWUM\\Minimalist Mindset\\Minimalist Quotes and Affirmationsjpg"
+path = f"S:\\ARCHIWUM\\Minimalist Mindset\\minimalistroomdecor"
 ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
 def numbering_name():
@@ -44,11 +44,11 @@ def tworzenie_pliku_excel():
     for i in range(ilosc_postow):
         
         # Write the message column data
-        message = f"Minimalist Quotes and Affirmations#{i+1}"
+        message = f"Minimalist Room Decor#{i+1}"
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
-        worksheet.write(i + 1, 1, "video")
+        worksheet.write(i + 1, 1, "image")
         
         # Write the link column data
         link_path = f"http://hosting2303687.online.pro/ARCHIWUM/Minimalist Mindset/{sciezka}/{i+1}.jpg"

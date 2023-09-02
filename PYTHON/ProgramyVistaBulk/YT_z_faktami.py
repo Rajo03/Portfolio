@@ -3,17 +3,18 @@ import datetime
 import pandas as pd
 import os
 from PIL import Image
+import openpyxl
 
 date_str = input("podaj date pierwszego posta '%Y-%m-%d %H:%M': ")
 sciezka = input("Podaj scieżke:")
 ilosc_postow = int(input("ile postow chcesz zaplanować?"))
 
+
 #TODO:Pobieranie opisu z innego arkusza
 
 
-
 #rename pliki i convert na jpg
-path = f"S:\\ARCHIWUM\\Marka osobista\\PL\\{sciezka}"
+path = f"S:\\ARCHIWUM\\Marka osobista\\ENG\\dowrzucenia\\{sciezka}"
 
 
 
@@ -21,7 +22,7 @@ path = f"S:\\ARCHIWUM\\Marka osobista\\PL\\{sciezka}"
 
 # Set up the input and output file paths
 def tworzenie_pliku_excel():
-    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilPL.xlsx"
+    xlsx_file_path = "C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Markaosobista_Eng.xlsx"
 
 
 
@@ -43,15 +44,20 @@ def tworzenie_pliku_excel():
     # Write the column data and other data to the worksheet
     for i in range(ilosc_postow):
         
+        source_workbook = openpyxl.load_workbook("C:\\Users\\kuba\\Desktop\\Wszystko\\ExcelAutomatize\\markaosobistaENG_Canvabulk .xlsx")
+        source_worksheet = source_workbook['innyarkusz']
+
+
         # Write the message column data
-        message = f"Clean Eating#{i+1}"
+        message_cell = source_worksheet.cell(row=i + 2, column=12)  # Kolumna "L" to kolumna 12
+        message = message_cell.value
         worksheet.write(i + 1, 0, message)
         
         # Write the type column data
-        worksheet.write(i + 1, 1, "video")
-        
+        worksheet.write(i + 1, 1, "image")
+        link_index = i * 8 + 1
         # Write the link column data
-        link_path = f"http://hosting2303687.online.pro/ARCHIWUM/Marka osobista/ENG/{sciezka}/{i+7}.jpg"
+        link_path = f"http://hosting2303687.online.pro/ARCHIWUM/Marka osobista/ENG/dowrzucenia/{sciezka}/{link_index}.jpg"
         worksheet.write(i + 1, 2, link_path)
         
         # Write the time column data
@@ -72,9 +78,9 @@ def tworzenie_pliku_excel():
 
 
 def convert_xlsx_to_csv():
-    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilPL.xlsx")
+    df = pd.read_excel("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Markaosobista_Eng.xlsx")
 
-    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\ProfilPL.csv", index=False)
+    df.to_csv("C:\\PROGRAMOWANIE\\PYTHON\\GotoweVistaBulk\\Markaosobista_Eng.csv", index=False)
 
     exit()
 
@@ -83,4 +89,3 @@ def convert_xlsx_to_csv():
 
 tworzenie_pliku_excel()
 convert_xlsx_to_csv()
-
