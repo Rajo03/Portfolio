@@ -49,7 +49,7 @@ def tworzenie_pliku_excel():
 
 
         # Write the message column data
-        message_cell = source_worksheet.cell(row=i + 2, column=12)  # Kolumna "L" to kolumna 12
+        message_cell = source_worksheet.cell(row=i + 2, column=14)  # Kolumna "L" to kolumna 12
         message = message_cell.value
         worksheet.write(i + 1, 0, message)
         
